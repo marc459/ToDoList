@@ -20,9 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	function removeTask(id)
 	{
-		const deleteRow = document.getElementById(id);
-		deleteRow.parentNode.removeChild(deleteRow);
-
+		document.getElementById(id).remove();
 	}
 
 	function addTask()
