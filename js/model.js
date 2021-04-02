@@ -28,4 +28,12 @@ export default class Model{
 		console.log(this.todos);
 		return {...todo}; // es igual a return Object.assign({},todo);
 	}
+	findTodo(id) {
+		return this.todos.findIndex((todo) => todo.id === id);
+	}
+
+	removeTodo(id) {
+		const index = this.todos.findIndex((todo) => todo.id === id);
+		this.todos.splice(index, 1);
+	}
 }
